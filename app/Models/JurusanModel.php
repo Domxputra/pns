@@ -4,14 +4,15 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class AlamatTinggal extends Model
+class JurusanModel extends Model
 {
     protected $DBGroup          = 'default';
-    protected $table            = 'alamattinggal';
+    protected $table            = 'jurusan';
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['alamat_tinggal'];
+    protected $allowedFields    = ['kode','jurusan'];
+
 }

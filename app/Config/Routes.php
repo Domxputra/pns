@@ -7,3 +7,10 @@ use CodeIgniter\Router\RouteCollection;
  */
 $routes->get('/', 'Home::index');
 $routes->get('/jurusan', 'jurusan::index');
+$routes->group('orang_tua', function($routes){
+    $routes->get('/', 'OrangTua::index');
+    $routes->add('tambah', 'OrangTua::tambah');
+    $routes->add('ubah/(:any)', 'OrangTua::ubah/$1');
+    $routes->add('hapus/(:any)', 'OrangTua::hapus/$1');
+});
+

@@ -23,7 +23,7 @@
                     <tr>
                         <th>No</th>
                         <th>Jurusan</th>
-                        <th>Action</th>
+                        
                     </tr>
                     <?php foreach ($jurusan as $key => $item) : ?>
                         <td><?= $key + 1 ?></td>

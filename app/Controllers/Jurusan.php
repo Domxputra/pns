@@ -15,7 +15,6 @@ class Jurusan extends BaseController
     public function index()
     {
         $data['jurusan'] = $this->jurusan->findAll();
-        $data['title'] = "jurusan";
         return view('jurusan');
     }
 

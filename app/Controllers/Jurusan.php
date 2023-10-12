@@ -7,26 +7,28 @@ use App\Models\JurusanModel;
 
 class Jurusan extends BaseController
 {
-    protected $jurusan;
+    protected $jrs;
 
     public function __construct() {
-        $this->jurusan = new JurusanModel();
+        $this->jrs = new JurusanModel() ;
     }
     public function index()
     {
-        $data['jurusan'] = $this->jurusan->findAll();
-        return view('jurusan');
+        $data['jurusan'] = $this->jrs->findAll();
+        return view("jurusan", $data);
     }
-
-    function tambah(){
-
+    public function tambah()
+    {
+        return view("tambah_jurusan");
     }
-
-    function edit(){
-
+    public function ubah($id)
+    {
+        $data['item'] = $this->jrs->where("kode", $id)->first();
+        return view("ubah_jurusan", $data);
     }
-
-    function hapus(){
-
+    public function hapus($id)
+    {
+        $this->jrs->delete($id);
+        return redirect()->to(base_url("jurusan"));
     }
 }

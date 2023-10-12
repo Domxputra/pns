@@ -8,11 +8,11 @@ class JurusanModel extends Model
 {
     protected $DBGroup          = 'default';
     protected $table            = 'jurusan';
-    protected $primaryKey       = 'id';
+    protected $primaryKey       = 'kode';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['jurusan'];
+    protected $allowedFields    = ["jurusan"];
 
 }

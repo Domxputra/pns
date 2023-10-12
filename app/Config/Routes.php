@@ -6,7 +6,13 @@ use CodeIgniter\Router\RouteCollection;
  * @var RouteCollection $routes
  */
 $routes->get('/', 'Home::index');
-$routes->get('/jurusan', 'jurusan::index');
+$routes->group('jurusan', function($routes){
+    $routes->get('/', 'Jurusan::index');
+    $routes->add('tambah', 'Jurusan::tambah');
+    $routes->add('ubah/(:any)', 'Jurusan::ubah/$1');
+    $routes->add('hapus/(:any)', 'Jurusan::hapus/$1');
+});
+
 $routes->group('orang_tua', function($routes){
     $routes->get('/', 'OrangTua::index');
     $routes->add('tambah', 'OrangTua::tambah');

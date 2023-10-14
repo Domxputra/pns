@@ -20,3 +20,10 @@ $routes->group('orang_tua', function($routes){
     $routes->add('hapus/(:any)', 'OrangTua::hapus/$1');
 });
 
+$routes->group('alamat_tinggal', function($routes){
+    $routes->get('/', 'Alamattinggal::index');
+    $routes->add('tambah', 'AlamatTinggal::tambah');
+    $routes->add('ubah/(:any)', 'AlamatTinggal::ubah/$1');
+    $routes->add('hapus/(:any)', 'AlamatTinggal::hapus/$1');
+});
+

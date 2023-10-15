@@ -27,3 +27,10 @@ $routes->group('alamat_tinggal', function($routes){
     $routes->add('hapus/(:any)', 'AlamatTinggal::hapus/$1');
 });
 
+$routes->group('mahasiswa', function($routes){
+    $routes->get('/', 'mahasiswa::index');
+    $routes->add('tambah', 'mahasiswa::tambah');
+    $routes->add('ubah/(:any)', 'mahasiswa::ubah/$1');
+    $routes->add('hapus/(:any)', 'mahasiswa::hapus/$1');
+});
+

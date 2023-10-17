@@ -16,7 +16,7 @@ class OrangTua extends BaseController
         $data['orang_tua'] =  $this->ot->findAll();
         return view("orang_tua", $data);
     }
-    public function tambah()
+    public function tambah($ot)
     {
         return view("tambah_orang_tua");
     }

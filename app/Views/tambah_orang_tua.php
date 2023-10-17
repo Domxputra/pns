@@ -16,7 +16,6 @@
                 <h4>Tambah Orang Tua</h4>
             </div>
             <div class="card-body">
-                <form action="">
                     <div class="form-group">
                       <label for="">NIK Ayah</label>
                       <input type="text"
@@ -33,13 +32,13 @@
                         class="form-control" name="nik_ibu" placeholder="masukkan nik ibu">
                     </div>
                     <div class="form-group">
-                      <label for="">Nama Ayah</label>
+                      <label for="">Nama Ibu</label>
                       <input type="text"
-                        class="form-control" name="nama_ibu" placeholder="masukkan nama ayah">
+                        class="form-control" name="nama_ibu" placeholder="masukkan nama ibu">
                     </div>
                     <div class="form-group">
                       <label for="">Alamat</label>
-                      <textarea name="almat" class="form-control"  rows="4" placeholder="Masukkan alaamt"></textarea>
+                      <textarea name="almat" class="form-control"  rows="4" placeholder="Masukkan alamat"></textarea>
                     </div>
                     <div class="card-footer">
                         <button class="btn btn-primary btn-sm">Simpan</button>
